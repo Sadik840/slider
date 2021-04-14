@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Custom Js Slider</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet">
+</head>
+<body>
+	<h1>Image Slider</h1>
+
+	<div class="slider-container">
+		<div class="slider">
+			<div class="slides">
+				
+
+				<!-- navigation buttons -->
+				<input type="radio" name="radio-btn" id="radio1">
+				<input type="radio" name="radio-btn" id="radio2">
+				<input type="radio" name="radio-btn" id="radio3">
+				<input type="radio" name="radio-btn" id="radio4">
+
+				<!-- next and prev button -->
+				<input type="radio" name="radio-btn" id="next">
+				<input type="radio" name="radio-btn" id="prev">
+
+				<!-- image slider -->
+				<div class="slide first"><img src="image/1.jpg" alt=""></div>
+				<div class="slide"><img src="image/2.jpg" alt=""></div>
+				<div class="slide"><img src="image/3.jpg" alt=""></div>
+				<div class="slide"><img src="image/4.jpg" alt=""></div>
+				
+
+			</div>
+
+			<!-- manually navigation section -->
+				<div class="manual-navigation">
+					<label for="radio1" class="manual-btn" onclick="displaySlide(1)"></label>
+					<label for="radio1" class="manual-btn" onclick="displaySlide(2)"></label>
+					<label for="radio1" class="manual-btn" onclick="displaySlide(3)"></label>
+					<label for="radio1" class="manual-btn" onclick="displaySlide(4)"></label>
+				</div>
+
+				<!-- next prev navigation system -->
+				<div class="next-prev">
+					<label for="next" class="next-btn" onclick="nextSlide(1)">></label>
+					<label for="prev" class="prev-btn" onclick="prevSlide(-1)"><</label>
+				</div>
+		</div>
+	</div>
+
+
+
+	<script type="">
+
+
+	var first = document.getElementsByClassName('first');
+	setMargin(1);
+	var active=0;
+
+	function displaySlide(n){
+	active = n;
+
+	setMargin(n); 
+}
+
+	function setMargin(num){
+	if(num==1){
+		first[0].style.marginLeft = '0%';
+	}
+	if(num==2){
+		first[0].style.marginLeft = '-20%';
+	}
+	if(num==3){
+		first[0].style.marginLeft = '-40%'; 
+	}
+	if(num==4){
+		first[0].style.marginLeft = '-60%';
+	}
+}
+
+	function nextSlide(p){
+	active = active+p;
+	displaySlide(active);
+}
+	function prevSlide(q){
+	active = active+q;
+	displaySlide(active);
+}
+
+</script>
+
+</body>
+</html>

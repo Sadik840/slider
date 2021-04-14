@@ -1,0 +1,84 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background: linear-gradient(to right,#7eca9c,#ccffbd);
+	height: 100vh;
+}
+.slides input{
+	display: none;
+}
+.slider-container{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.slider{
+	width: 800px;
+	height: 500px;
+	border-radius: 10px;
+	overflow: hidden;
+} 
+.slides{
+	width: 500%;
+	height: 500px;
+	display: flex;
+
+}
+.slide{
+	transition: 1s;
+	width: 20%;
+}
+.slide img{
+	width: 800px;
+	height: 500px;
+}
+.manual-navigation{
+	position: absolute;
+	width: 800px;
+	display: flex;
+	justify-content: center;
+	margin-top: -50px;
+
+}
+.manual-navigation .manual-btn{
+	padding: 6px;
+	border: 2px solid red;
+	border-radius: 50%;
+	cursor: pointer;
+	transition: 1s;
+}
+.manual-navigation .manual-btn:not(:last-child){
+	margin-right: 30px;
+}
+.manual-navigation .manual-btn:hover{
+	background-color: red;
+}
+.next-btn{
+	position: absolute;
+	top: 40%;
+	right: 26%;
+	color: white;
+	font-size: 52px;
+}
+.prev-btn{
+	position: absolute;
+	top: 40%;
+	left: 26%;
+	color: white;
+	font-size: 52px;
+}
+.prev-btn,.next-btn:hover{
+	cursor: pointer;
+}
+h1{
+	text-align: center;
+	font-family: 'Zen Dots', cursive;
+	color: forestgreen;
+	text-transform: uppercase;
+	margin-bottom: 30px;
+}
+.next-prev label{
+	color: red;
+}
